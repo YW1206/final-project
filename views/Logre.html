@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<!-- 登陆 -->
+<html>
+<head>
+<title>Purple_loginform Website Template | Home :: w3layouts</title>
+<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<!-- -->
+<script>var __links = document.querySelectorAll('a');function __linkClick(e) { parent.window.postMessage(this.href, '*');} ;for (var i = 0, l = __links.length; i < l; i++) {if ( __links[i].getAttribute('data-t') == '_blank' ) { __links[i].addEventListener('click', __linkClick, false);}}</script>
+<script src="/javascripts/jquery.min1.js"></script>
+<script>$(document).ready(function(c) {
+	$('.alert-close').on('click', function(c){
+		$('.message').fadeOut('slow', function(c){
+	  		$('.message').remove();
+		});
+	});	  
+});
+</script>
+</head>
+<body>
+<!-- contact-form -->	
+<div class="message warning">
+<div class="inset">
+	<div class="login-head">
+		<h1>Sign in </h1>
+		 <div class="alert-close"> </div> 			
+	</div>
+		 <form action="/Logre" method="post">
+	<!-- //这里的路径是和app.js里面的路由的路径相匹配的，不是和路由里面post请求方式的路径匹配的 -->
+        <div> 
+			<li>
+				<input type="text" name="name" class="text" placeholder="Username" > 
+			</li>
+			<li>
+				<input type="password" name="password" placeholder="Password" >  
+			</li>
+        </div>
+			<div class="submit">
+				<input class="sub_1" type="submit" value="Sign in" >
+				<a class="sub_2" href="/signup" target="_blank">Sign up</a>
+				<h4><a href="#">Lost your Pasdsword ?</a></h4>
+				<div class="clear">  </div>	
+			</div>
+				
+		</form>
+		</div>					
+	</div>
+	</div>
+	<div class="clear"> </div>
+<!--- footer --->
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+document.getElementById('blog').onclick=function(){
+    window.location.href="blog";
+}
+document.getElementById('self').onclick=function(){
+    window.location.href="self";
+}
+document.getElementById('LogRe').onclick=function(){
+    window.location.href="LogRe";
+}
+document.getElementById("sub_1").onclick=function(){
+    window.location.href="signup";
+};
