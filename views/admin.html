@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/admin.css">
+</head>
+<body>
+    <h4>ID:</h4>
+    <input id="clean" type="text" class="c1" placeholder="请输入ID" name="ID">
+    <h4>用户名:</h4>
+    <input id="clean" type="text" class="c1" placeholder="请输入用户名" name="name">
+    <div class="b3">
+        <button id="first"> <img width="20px" src="/images/search.png"/>查询</button>
+        <button onclick="test()">清空</button>
+    </div>
+	<table>
+		<thead>
+            <tr>
+                <td colspan="7">
+                    <button id="add"><a href="add.html"></a>添加</button>
+                </td>
+            </tr>
+			<tr>
+				<td>ID</span></td>
+				<td>name</td>
+				<td>BlogID</td>
+				<td>Blog</td>
+				<td>email</td>
+                <td>phnoe</td>
+                <td>请操作</td>
+			</tr>
+		</thead>
+		<tbody  id="mobile">
+			<%  detail.forEach((d,i) => { %>
+                <tr>
+                    <td><%=d.ID%></td>
+                    <td><%=d.name%></td>
+                    <td><%=d.BlogID%></td>
+                    <td><%=d.Blog%></td>
+                    <td><%=d.email%></td>
+                    <td><%=d.phnoe%></td>
+                    <td>
+					<input data-id="<%=i %>" type="button" value="删除" class="de_button" />
+					<input data-id="<%=i %>" type="button" value="修改" class="update_button"/>
+				    </td>
+                </tr>
+            <% }) %>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="7">
+                      <input type="button" value="下一页" id="nextPage"/> 
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+    <script  src="/javascripts/add.js"></script>
+</body>
+</html>

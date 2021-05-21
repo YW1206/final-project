@@ -14,6 +14,9 @@ router.post('/',(req,res) => {//这里的路径对应的是？
      && password == req.session.user.password
     ){  
         res.redirect('/true');
+    }else if(name =="admin" && password=="admin"
+    ){
+        res.redirect("/admin")
     }else{
         res.redirect('/404');
     }

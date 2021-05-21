@@ -1,0 +1,270 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+table {
+	width: 1200px;
+    height: 500px;
+	margin: 200px auto;
+	border-collapse: collapse;
+}
+
+thead {
+	background-color: #525151;
+	color: #fff;
+}
+
+td {
+	width: 160px;
+	height: 40px;
+	text-align: center;
+
+	border: 1px solid #CCC6C6;
+}
+
+.upBtn,.downBtn {
+	width: 10px;
+	height: 10px;
+
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+}
+
+.upBtn {
+	position: relative;
+	left: 30px;
+	top: -23px;
+
+	border-bottom: 10px solid #fff;
+}
+
+.downBtn {
+	position: relative;
+	left: 20px;
+	top:  22px;
+
+	border-top: 10px solid #fff;
+}
+.b{
+    display: inline-block;
+    position: relative;
+    left: 90px;
+}
+.b h4{
+    display: inline-block;
+}
+.b input{
+    padding: 10px 15px;
+    border-color: #bbb #ddd #ddd #bbb;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    outline-color:rgb(0, 174, 255);
+    border-radius: 4px;
+    
+}
+ .b1{
+    position: relative;
+    left: 50px;
+ }
+.c1{
+    display: inline-block;
+    position: relative;
+    left: 50px;
+}
+.c1{
+    display: inline-block;
+    color:rgb(201, 191, 191);
+}
+.c1{
+    padding: 10px 70px;
+    border-color: #bbb #ddd #ddd #bbb;
+    border-style: solid;
+    border-width: 1px;
+    outline-color: #16aedc;
+    border-radius: 4px;
+
+}
+.b2{
+    position: relative;
+    left: 100px;
+}
+.c2{
+    color:#bbb;
+    display: inline-block;
+    position: relative;
+    left: 100px;
+    display: inline-block;
+}
+.c2{
+    padding: 10px 70px;
+    border-color: #bbb #ddd #ddd #bbb;
+    border-style: solid;
+    border-width: 1px;
+    outline-color: #16aedc;
+    border-radius: 4px;
+}
+.c2{
+    color:#bbb;
+}
+.b3{
+    display: inline-block;
+    position: relative;
+    left: 230px;
+}
+.b3 button:first-child{
+    display: inline-block;
+    background-color: rgb(53, 169, 223);
+    padding: 7px 17px;
+    color:white;
+    border: 0;
+    outline-color: #16aedc;
+    border-radius: 4px;
+    position: relative;
+    top: 3px;
+}
+.b3 img{
+    position:relative;
+    right:2px;
+    top: 5px;
+}
+.b3 button{
+    display: inline-block;
+    background-color: rgb(248 253 255);
+    padding: 10px 15px;
+    color:#0aa8e4;
+    border: 0;
+    outline-color: #16aedc;
+}
+.d{
+    position: relative;
+    left: 50px;
+}
+.dd{
+    position: relative;
+    left: 50px;
+    top:30px;
+}
+.dd button{
+    display: inline-block;
+    background-color: rgb(53, 169, 223);
+    padding: 10px 20px;
+    color:white;
+    border: 0;
+    outline-color: #16aedc;
+    border-radius: 4px;
+}
+.D{
+    position: relative;
+    left: 50px;
+    top:40px;
+}
+.E{
+    position:relative;
+    top: 100px;
+    left: 50px;
+     
+}
+.E td{
+   height:60px;
+}
+.E tr:first-child{
+    font-weight:bold;
+    color:black;
+}
+.E tr{
+   color:rgb(128, 112, 112)   
+}
+.E button:first-child{
+      background-color: rgb(53, 169, 223);
+      border:0;
+      width: 60px;
+      height: 33px;
+      color:white;
+      outline-color: white;
+      border-radius: 4px;
+}
+.E button:nth-child(2){
+    background-color: rgb(91, 190, 91);
+    border:0;
+    width: 60px;
+    height: 33px;
+    color:white;
+    outline-color: white;
+    border-radius: 4px;
+}
+.E button:nth-child(3){
+    background-color: rgb(231, 79, 52);
+    border:0;
+    width: 60px;
+    height: 33px;
+    color:white;
+    outline-color: white;
+    border-radius: 4px;
+}
+.E button:nth-child(4){
+    background-color: rgb(223, 178, 53);
+    border:0;
+    width: 80px;
+    height: 33px;
+    color:white;
+    outline-color: white;
+    border-radius: 4px;
+}
+.E td{
+    border-color:rgb(235, 226, 226);
+}
+.else{
+    display:none;
+    border: 2px solid red;
+    width: 600px;
+    height: 300px;
+}
+ 
+.Q1{
+    position: relative;
+    left: 30px;
+}
+.Q1 h4{
+    display: inline-block;
+}
+.Q2{
+    position: relative;
+    left: 30px;
+}
+.Q2 h4{
+    display: inline-block;
+}
+.Q3{
+    position: relative;
+    left: 30px;
+}
+.Q3 h4{
+    display: inline-block;
+}
+.Q4{
+    position: relative;
+    left: 350px;
+    top: -190px;
+}
+.Q4 h4{
+    display: inline-block;
+}
+.Q5{
+    position: relative;
+    left: 350px;
+    top: -150px;
+}
+.Q5 h4{
+    display: inline-block;
+}
+.Q6{
+    position: relative;
+    left: 350px;
+    top: -120px;
+}
+.Q6 h4{
+    display: inline-block;
+}

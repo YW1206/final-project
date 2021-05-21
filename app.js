@@ -14,6 +14,7 @@ var signupRouter = require('./routes/signup');
 var failRouter = require('./routes/404');
 var succRouter = require('./routes/true');
 var succ1Router = require('./routes/true1');
+var adminRouter = require('./routes/admin');
  
 
 var app = express();
@@ -45,6 +46,7 @@ app.use('/signup',signupRouter);
 app.use('/404',failRouter);
 app.use('/true',succRouter);
 app.use('/true1',succ1Router);
+app.use('/admin',adminRouter);
  
 
 // catch 404 and forward to error handler

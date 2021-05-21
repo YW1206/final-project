@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+       <form action="/add"  method="POST"> 
+           <!-- name="id" -->
+           <input type="hidden" name="id" value="<%=id %>" />
+           <input type="text" name="user" value="<%=obj.name %>" placeholder="请填写姓名" />
+           <br/>
+           <input type="number" name="s1" value="<%=obj.s1 %>" placeholder="请填写语文分数" />
+           <br/>
+           <input type="number" name="s2" value="<%=obj.s2 %>" placeholder="请填写数学分数" />
+           <br/>
+           <input type="number" name="s3" value="<%=obj.s3 %>" placeholder="请填写英语分数" />
+           <br/>
+           <input type="submit" placeholder="请提交" />
+       </form>
+   </div>
+</body>
+</html>
