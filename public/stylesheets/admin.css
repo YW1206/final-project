@@ -72,14 +72,14 @@ td {
 .c1{
     display: inline-block;
     position: relative;
-    left: 50px;
+    left: 500px;
 }
 .c1{
     display: inline-block;
     color:rgb(201, 191, 191);
 }
 .c1{
-    padding: 10px 70px;
+    padding: 10px 10px;
     border-color: #bbb #ddd #ddd #bbb;
     border-style: solid;
     border-width: 1px;
@@ -112,7 +112,7 @@ td {
 .b3{
     display: inline-block;
     position: relative;
-    left: 230px;
+    left: 550px;
 }
 .b3 button:first-child{
     display: inline-block;
@@ -267,4 +267,33 @@ td {
 }
 .Q6 h4{
     display: inline-block;
+}
+.name{
+   position: relative;
+    top: 32px;
+    left: 440px;
+}
+.ID{
+    position: relative;
+    top: 62px;
+    left: 200px;
+    display: inline-block;
+}
+.ID_1{
+    position: relative;
+    top: 62px;
+    left: 200px;
+    padding:  10px 10px;
+    border-color: #bbb #ddd #ddd #bbb;
+    border-style: solid;
+    border-width: 1px;
+    outline-color: #16aedc;
+    border-radius: 4px;
+    display: inline-block;
+    color: rgb(201, 191, 191);
+}
+.search{
+    position: relative;
+    top: 170px;
+    left: -150px;
 }

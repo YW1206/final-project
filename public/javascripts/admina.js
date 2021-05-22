@@ -4,7 +4,7 @@ function test(){
     document.getElementById("clear_2").value="";
 }
 document.getElementById('add').onclick = function(){
-    window.location.href="/addpage";
+    window.location.href="add";
 };
 
 Array.from(document.getElementsByClassName('de_button')).forEach(i => {

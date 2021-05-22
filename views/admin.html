@@ -6,19 +6,22 @@
 	<link rel="stylesheet" type="text/css" href="/stylesheets/admin.css">
 </head>
 <body>
-    <h4>ID:</h4>
-    <input id="clean" type="text" class="c1" placeholder="请输入ID" name="ID">
-    <h4>用户名:</h4>
-    <input id="clean" type="text" class="c1" placeholder="请输入用户名" name="name">
+    <div class="search"> 
+    <h4 class="ID">ID:</h4>
+    <input   id="clean" type="text" class="ID_1" placeholder="请输入ID" name="ID">
+    <h4 class="name">用户名:</h4>
+    <input id="clear_1" type="text" class="c1" placeholder="请输入用户名" name="name">
     <div class="b3">
         <button id="first"> <img width="20px" src="/images/search.png"/>查询</button>
         <button onclick="test()">清空</button>
+    </div>
     </div>
 	<table>
 		<thead>
             <tr>
                 <td colspan="7">
-                    <button id="add"><a href="add.html"></a>添加</button>
+                    <button id="add">添加</button>
+                    <!-- <a href="add.html"></a> -->
                 </td>
             </tr>
 			<tr>
@@ -55,6 +58,6 @@
 			</tr>
 		</tfoot>
 	</table>
-    <script  src="/javascripts/add.js"></script>
+    <script  src="/javascripts/admina.js"></script>
 </body>
 </html>

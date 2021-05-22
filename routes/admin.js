@@ -15,28 +15,21 @@ fs.readFile(path.join(__dirname,"/bean","/user.json"),{encoding:"UTF-8"},(err,da
 // })
 
 router.get('/',(req,res,next) => {
-        res.render('admin',{detail:d} );
-});
-    
-
-
-
-router.get('/addpage',(req,res) => {
-    res.render('add',{obj:{},id:""});
+    res.render('admin',{detail:d} );
 });
 
 
 router.post('/add',(req,res) => {
     let obj = {
-        // id:req.body.id,
+        ID:req.body.ID,
         name:req.body.user,
-        s1:req.body.s1,
-        s2:req.body.s2,
-        s3:req.body.s3,
-        total:parseInt(req.body.s1)+parseInt(req.body.s2)+parseInt(req.body.s3)
+        BlogID:req.body.BlogID,
+        Blog:req.body.Blog,
+        email:req.body.email,
+        phnoe:req.body.phnoe
     };
-    if(req.body.id !=undefined && req.body.id !=""){
-        d[req.body.id] = obj;
+    if(req.body.ID !=undefined && req.body.ID !=""){
+        d[req.body.ID] = obj;
         res.redirect('/');
     }else{
         d.unshift(obj);

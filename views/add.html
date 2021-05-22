@@ -10,14 +10,17 @@
    <div>
        <form action="/add"  method="POST"> 
            <!-- name="id" -->
-           <input type="hidden" name="id" value="<%=id %>" />
-           <input type="text" name="user" value="<%=obj.name %>" placeholder="请填写姓名" />
+           <input type="number" name="ID" value="<%=obj.ID %>" placeholder="请填写ID"  />
            <br/>
-           <input type="number" name="s1" value="<%=obj.s1 %>" placeholder="请填写语文分数" />
+           <input type="text" name="name" value="<%=obj.name %>" placeholder="请填写姓名" />
            <br/>
-           <input type="number" name="s2" value="<%=obj.s2 %>" placeholder="请填写数学分数" />
+           <input type="number" name="BlogID" value="<%=obj.BlogID %>" placeholder="请填写博客ID" />
            <br/>
-           <input type="number" name="s3" value="<%=obj.s3 %>" placeholder="请填写英语分数" />
+           <input type="text" name="Blog" value="<%=obj.Blog %>" placeholder="请填写博客内容" />
+           <br/>
+           <input type="text" name="email" value="<%=obj.email %>" placeholder="请填写Email" />
+           <br/>
+           <input type="number" name="phnoe" value="<%=obj.phnoe %>" placeholder="请填写电话号码" />
            <br/>
            <input type="submit" placeholder="请提交" />
        </form>
