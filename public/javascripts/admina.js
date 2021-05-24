@@ -4,18 +4,27 @@ function test(){
     document.getElementById("clear_2").value="";
 }
 document.getElementById('add').onclick = function(){
-    window.location.href="add";
+    window.location.href="/admin/add";
 };
+
+document.getElementById('user').onclick = function(){
+    window.location.href="user";
+};
+
+document.getElementById('mark').onclick = function(){
+    window.location.href="mark";
+};
+
 
 Array.from(document.getElementsByClassName('de_button')).forEach(i => {
     i.onclick = function(){
         let index=(this.getAttribute("data-id"));
-        window.location.href="/de/"+index;
+        window.location.href="/admin/de/"+index;
     };
 });
 Array.from(document.getElementsByClassName('update_button')).forEach(i => {
     i.onclick = function(){
         let index=(this.getAttribute("data-id"));
-        window.location.href="/update/"+index;
+        window.location.href="/admin/update/"+index;
     };
 });

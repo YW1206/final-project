@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var ejs = require('ejs'); 
 var session = require('express-session');
-
+// 
 var itemRouter = require('./routes/item');
 var blogRouter = require('./routes/blog');
 var LogreRouter = require('./routes/Logre');
@@ -15,7 +15,11 @@ var failRouter = require('./routes/404');
 var succRouter = require('./routes/true');
 var succ1Router = require('./routes/true1');
 var adminRouter = require('./routes/admin');
-var addRouter = require('./routes/add');
+// var addRouter = require('./routes/add');
+var userRouter = require('./routes/user');
+var markRouter = require('./routes/mark');
+
+
 
 var app = express();
 
@@ -37,7 +41,7 @@ app.use(session({
   rolling:true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
-
+// 
 app.use('/', itemRouter);
 app.use('/blog',blogRouter);//后面代表的是路径上面的名字,而且还是路由的名字关联，如果这个/后面什么都不写，就跳转不到那个路由
 app.use('/Logre',LogreRouter);
@@ -47,7 +51,9 @@ app.use('/404',failRouter);
 app.use('/true',succRouter);
 app.use('/true1',succ1Router);
 app.use('/admin',adminRouter);
-app.use('/add',addRouter);
+// app.use('/add',addRouter);
+app.use('/user',userRouter);
+app.use('/mark',markRouter);
  
 
 // catch 404 and forward to error handler
