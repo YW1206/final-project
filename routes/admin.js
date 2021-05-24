@@ -1,29 +1,16 @@
 let express = require('express');
 let router = express.Router();
-let fs = require('fs');
-// let d = new Array();
-let path= require('path');
-var mysql=require('mysql');
-// fs.readFile(path.join(__dirname,"/bean","/user.json"),{encoding:"UTF-8"},(err,data)=>{
-        // d = JSON.parse(data);
-// });
-var connect=mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password:"123456",
-    database:"nodejs_project"
-})
+var db = require('../models/db');
  
 
 router.get('/',(req,res,next) => {
-    connect.query("select * from admin",function(err,result,fields){
-        console.log(err);
-        console.log(result);
-        console.log(fields);
-        res.render('admin',{detail:result} );
 
-    }) 
-     
+    db.query("select * from admination",function(err, results, fields){
+        console.log(err);
+        console.log(results);
+        console.log(fields);
+        res.render('admin',{detail:results});
+   });
 });
 
 
