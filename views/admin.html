@@ -47,7 +47,7 @@
                     <td><%=d.phnoe%></td>
                     <td>
 					<input data-id="<%=d.ID %>" type="button" value="删除" class="de_button" />
-					<input data-id="<%=i %>" type="button" value="修改" class="update_button"/>
+					<input data-id="<%=d.ID %>" type="button" value="修改" class="update_button"/>
 				    </td>
                 </tr>
             <% }) %>
@@ -55,6 +55,7 @@
 		<tfoot>
 			<tr>
 				<td colspan="7">
+                      <input type="button" value="上一页" id="lastPage"/>
                       <input type="button" value="下一页" id="nextPage"/> 
 				</td>
 			</tr>

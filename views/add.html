@@ -8,17 +8,19 @@
 </head>
 <body>
    <div>
+    <!-- value="<%=obj.name %>" -->
+    <!-- value="<%=obj.ID %>" -->
        <form action="/admin/add"  method="POST"> 
-           <input type="hidden" name="ID" value="<%=obj.ID %>" placeholder="请填写ID"  />
-           <input type="text" name="name" value="<%=obj.name %>" placeholder="请填写姓名" />
+           <input type="hidden" name="ID"  placeholder="请填写ID"  />
+           <input type="text" name="name"  placeholder="请填写姓名" />
            <br/>
-           <input type="int" name="BlogID" value="<%=obj.BlogID %>" placeholder="请填写博客ID" />
+           <input type="int" name="BlogID" placeholder="请填写博客ID" />
            <br/>
-           <input type="text" name="Blog" value="<%=obj.Blog %>" placeholder="请填写博客内容" />
+           <input type="text" name="Blog" placeholder="请填写博客内容" />
            <br/>
-           <input type="text" name="email" value="<%=obj.email %>" placeholder="请填写Email" />
+           <input type="text" name="email" placeholder="请填写Email" />
            <br/>
-           <input type="number" name="phnoe" value="<%=obj.phnoe %>" placeholder="请填写电话号码" />
+           <input type="number" name="phnoe" placeholder="请填写电话号码" />
            <br/>
            <input type="submit" placeholder="请提交" />
        </form>
