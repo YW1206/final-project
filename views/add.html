@@ -9,12 +9,10 @@
 <body>
    <div>
        <form action="/admin/add"  method="POST"> 
-           <!-- name="id" -->
            <input type="hidden" name="ID" value="<%=obj.ID %>" placeholder="请填写ID"  />
-           <br/>
            <input type="text" name="name" value="<%=obj.name %>" placeholder="请填写姓名" />
            <br/>
-           <input type="number" name="BlogID" value="<%=obj.BlogID %>" placeholder="请填写博客ID" />
+           <input type="int" name="BlogID" value="<%=obj.BlogID %>" placeholder="请填写博客ID" />
            <br/>
            <input type="text" name="Blog" value="<%=obj.Blog %>" placeholder="请填写博客内容" />
            <br/>

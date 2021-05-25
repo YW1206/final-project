@@ -4,7 +4,8 @@ var db = require('../models/db');
  
 
 router.get('/',(req,res,next) => {
-    let data="select * from admination where status=1 order by ID desc";
+    // order by ID desc
+    let data="select * from admination where status=1 order by ID desc limit 3";
     db.exe(data,function(err, results, fields){
         res.render('admin',{detail:results});
    });
@@ -44,14 +45,15 @@ router.get('/update/:id',(req,res)=>{
      
 });
 
-// router.get('/update/:id',(req,res)=>{
-    // res.render('add',{obj: d[req.params.id],id:req.params.id}) ;  
-// });
-
-router.post("/nextPage",(req,res)=>{
-    res.json(d);
-    //当点击下一页时，我们想要的是局部刷新数据就可以了，
-//而不是去刷新整个页面，所以这里要的是返回一个数据
-})
+router.get("/nextPage",(req,res)=>{
+    let lion="select * from admination where status=1 order by ID desc";
+    db.exe(lion,"",(err,result)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.render('admin',{detail:result});
+        }
+    })
+});
 
 module.exports = router;

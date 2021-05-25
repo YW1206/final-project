@@ -7,6 +7,11 @@ document.getElementById('add').onclick = function(){
     window.location.href="/admin/add";
 };
 
+document.getElementById('nextPage').onclick = function(){
+    window.location.href="/admin/nextPage";//在这里对应的路径是 /path1/path2 
+    //:路径1是对应了路由的js的文件路径,路径2则是对应了请求方式里面写的路径
+};
+
 document.getElementById('user').onclick = function(){
     window.location.href="user";
 };
