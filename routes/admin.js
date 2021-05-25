@@ -4,11 +4,8 @@ var db = require('../models/db');
  
 
 router.get('/',(req,res,next) => {
-
-    db.query("select * from admination",function(err, results, fields){
-        console.log(err);
-        console.log(results);
-        console.log(fields);
+    let data="select * from admination order by ID asc";
+    db.exe(data,function(err, results, fields){
         res.render('admin',{detail:results});
    });
 });
@@ -18,30 +15,28 @@ router.get('/add',(req,res) => {
     res.render('add',{obj:{},id:""});
 });
 
-
 router.post('/add',(req,res) => {
-    let obj = {
-        ID:req.body.ID,
-        name:req.body.name,
-        BlogID:req.body.BlogID,
-        Blog:req.body.Blog,
-        email:req.body.email,
-        phnoe:req.body.phnoe
-    };
-    if(req.body.ID !=undefined && req.body.ID !=""){
-        d[req.body.ID] = obj;
-        res.redirect('/admin');
-    }else{
-        d.unshift(obj);
-        res.redirect('/admin');
-    };
-});
-// 
+    let dog="insert into admination(name,BlogID,Blog,email,phnoe) value(?,?,?,?,?) ";
+    let cat=[req.body.name,req.body.BlogID,req.body.Blog,req.body.email,req.body.phnoe];
+    db.exe(dog,cat,(err,results,fields)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.redirect("/admin");
+        }
+})});
+
 router.get('/de/:id',(req,res) => {
-     delete d[req.params.id];
-     res.redirect('/admin');
+    let sql=`delete from admination where id=${req.params.id}`;
+    db.exe(sql,(err,result)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.redirect('/admin');
+        }
+    })
 });
-router.get('/update/:id',(req,res)=>{
+router.get('/update/:id',(req,res)=>{     
     let id=d[req.params.id];
     res.render('add',{obj:id,ID:req.params.id});
      

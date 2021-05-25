@@ -19,6 +19,7 @@ document.getElementById('mark').onclick = function(){
 Array.from(document.getElementsByClassName('de_button')).forEach(i => {
     i.onclick = function(){
         let index=(this.getAttribute("data-id"));
+        console.log(index);
         window.location.href="/admin/de/"+index;
     };
 });

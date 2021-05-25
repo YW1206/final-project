@@ -7,7 +7,7 @@ var pool = mysql.createPool({
         database: 'nodejs_project'
 });
 
-var query = function (sql, params, callback) {
+var exe = function (sql, params, callback) {
     pool.getConnection(function (err, con) {
         if (err) {
             callback(err, null, null);
@@ -26,7 +26,17 @@ var query = function (sql, params, callback) {
         }
     });
 }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
-db.query = query;
+                 
+                
+
+db.exe = exe;
 
 module.exports = db;

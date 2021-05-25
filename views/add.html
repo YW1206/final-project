@@ -10,7 +10,7 @@
    <div>
        <form action="/admin/add"  method="POST"> 
            <!-- name="id" -->
-           <input type="number" name="ID" value="<%=obj.ID %>" placeholder="请填写ID"  />
+           <input type="hidden" name="ID" value="<%=obj.ID %>" placeholder="请填写ID"  />
            <br/>
            <input type="text" name="name" value="<%=obj.name %>" placeholder="请填写姓名" />
            <br/>
