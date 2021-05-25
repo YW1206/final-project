@@ -36,7 +36,7 @@
                 <td>请操作</td>
 			</tr>
 		</thead>
-		<tbody  id="mobile">
+		<tbody>
 			<%  detail.forEach((d,i) => { %>
                 <tr>
                     <td><%=d.ID%></td>
@@ -46,7 +46,7 @@
                     <td><%=d.email%></td>
                     <td><%=d.phnoe%></td>
                     <td>
-					<input data-id="<%=i %>" type="button" value="删除" class="de_button" />
+					<input data-id="<%=d.ID %>" type="button" value="删除" class="de_button" />
 					<input data-id="<%=i %>" type="button" value="修改" class="update_button"/>
 				    </td>
                 </tr>

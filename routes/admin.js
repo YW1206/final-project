@@ -4,7 +4,7 @@ var db = require('../models/db');
  
 
 router.get('/',(req,res,next) => {
-    let data="select * from admination order by ID asc";
+    let data="select * from admination where status=1 order by ID desc";
     db.exe(data,function(err, results, fields){
         res.render('admin',{detail:results});
    });
@@ -27,11 +27,13 @@ router.post('/add',(req,res) => {
 })});
 
 router.get('/de/:id',(req,res) => {
-    let sql=`delete from admination where id=${req.params.id}`;
-    db.exe(sql,(err,result)=>{
+    let ID = req.params.id;
+    let sql="update admination set status=0  where id=?";
+    db.exe(sql,[ID],(err,result)=>{
         if(err){
             console.log(err);
         }else{
+            console.log(result);
             res.redirect('/admin');
         }
     })
