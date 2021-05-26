@@ -1,12 +1,17 @@
 var express = require('express');
 var router = express.Router();
-
+var db = require('../models/db');
 
 router.get('/', function(req, res, next) {
     res.render('Logre');
   });
 
 router.post('/',(req,res) => {//这里的路径对应的是？
+    let sad="select * from table user where name=? and pass=?"
+    let happy=[req.session.name,req.session.password]
+    db.exe(sad,happy,(err,row)=>{
+        
+    })
     let name=req.body.name;
     let password=req.body.password;
     if( req.session.user != undefined 

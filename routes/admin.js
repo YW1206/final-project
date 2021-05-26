@@ -45,19 +45,42 @@ router.get('/de/:id',(req,res) => {
     })}); 
 
 // -------------修改---------------------------------
-    router.get('/update',(req,res)=>{ //由于这里的路径出现了问题，所以无法和新增网页的路径匹配上，没有办法跳转过去
+router.get('/update',(req,res)=>{ //由于这里的路径出现了问题，所以无法和新增网页的路径匹配上，没有办法跳转过去
     let ID=req.query.id;    
-    let apple="select * from admination where id=?";
+    let apple="select * from admination where id = ?";
     db.exe(apple,[ID],(err,data)=>{
         if(err){
             console.log(err);
         }else{
             console.log(data);
-            res.render('/update',{data:data});}
+            res.render('update',{data:data[0]});}//这里打印出来的data是一个数组，所以应该拿到里面的第一个值，再进行传参
+            //渲染文件时不需要用/，在重定向和get或post请求方式等才需要使用/
     } )
 });
+router.post('/update',(req,res) => {
+    let dog="insert into admination(name,BlogID,Blog,email,phnoe) value(?,?,?,?,?) ";
+    let cat=[req.body.name,req.body.BlogID,req.body.Blog,req.body.email,req.body.phnoe];
+    db.exe(dog,cat,(err,results,fields)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.redirect("/admin");
+        }
+})}); 
  
-
+// if (req.url === '/update' || req.url === '/update?id=?' && req.method === 'get') {
+    // let ID = req.query.id;
+    // let apple="select * from admination where id=?";
+    // db.exe(apple,[ID],(err,data)=>{
+        // if(err){
+            // console.log(err);
+        // }else{
+            // console.log(data);
+            // res.render('/update',{data:data});}
+    // } )
+//  
+//   }
+ 
 
 // -------------分页--------------------------------
 router.get("/nextPage",(req,res)=>{
