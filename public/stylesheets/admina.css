@@ -302,8 +302,7 @@ td {
 }
 .user_1{
     position: relative;
-    left: 650px;
-    top: 17px;
+    left: 950px;
     padding:  10px 10px;
     border-color: #16aedc;
     border-style: solid;
@@ -324,4 +323,8 @@ td {
     border-radius: 4px;
     display: inline-block;
     color: #16aedc;
+}
+.back{
+    position:relative;
+    left:100px;
 }

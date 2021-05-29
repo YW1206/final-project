@@ -4,13 +4,11 @@ var db = require('../models/db');
  
 // -------------The front page displays the database data----------------------
 router.get('/',(req,res,next) => {
-    // order by ID desc
-    // let data="select * from admination where status=1 order by ID desc limit 3";
-    //select * from table limit (1-1)*10,10;
     let data="select * from admination where status=1 order by ID desc limit 3"
     db.exe(data,[],function(err, results, fields){
-        res.render('admin',{detail:results});
-   });
+        res.render('admin',{detail:results}); 
+        
+    });
 });
 
 
@@ -80,9 +78,6 @@ router.get("/nextPage",(req,res)=>{
     })
 });
 
-//  select * from table limit (start-1)*limit,limit;
-// select * from admination where status=1  order by ID desc limit ?,?
-
 router.get("/lastPage",(req,res)=>{
     let lion="select * from admination where status=1  order by ID desc limit 3 ";
     // let page=[a*5,5]
@@ -91,6 +86,19 @@ router.get("/lastPage",(req,res)=>{
             console.log(err);
         }else{
             res.render('admin',{detail:result});
+        }
+    })
+});
+
+router.get("/query",(req,res)=>{
+    let banana="select * from admination where id=?";
+    let data=[req.query.ID];
+    db.exe(banana,data,(err,reslut)=>{
+        if(err){
+            console.log(err);
+        }else{
+            console.log(reslut);//拿到的值为空，没有数据，是一个空数组？？？
+            res.render("admin",{detail:reslut});
         }
     })
 });

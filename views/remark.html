@@ -19,7 +19,7 @@
             <button id="first"> <img width="20px" src="/images/search.png"/>查询</button>
             <button onclick="test()">清空</button>
         </div>
-        <button id="user_back">返回首页</button>
+        <button class="back" id="remark_back">返回首页</button>
         </div>
     </div>
     <table>
@@ -32,28 +32,28 @@
             </tr>
             <tr>
                 <td>id</td>
-                <td>name</td>
-                <td>age</td>
-                <td>birth</td>
-                <td>address</td>
-                <td>email</td>
-                <td>phnoe</td>
+                <td>blogid</td>
+                <td>user's id</td>
+                <td>user's name</td>
+                <td>remarker's id</td>
+                <td>remarker's name</td>
+                <td>remarktext</td>
                 <td>请操作</td>
             </tr>
         </thead>
         <tbody>
-            <%  user.forEach((user,i) => { %>
+            <% remark.forEach((remark,i) => { %>
                 <tr>
-                    <td><%=user.id%></td>
-                    <td><%=user.name%></td>
-                    <td><%=user.age%></td>
-                    <td><%=user.birth%></td>
-                    <td><%=user.address%></td>
-                    <td><%=user.email%></td>
-                    <td><%=user.phone%></td>
+                    <td><%=remark.id%></td>
+                    <td><%=remark.blogid%></td>
+                    <td><%=remark.userid%></td>
+                    <td><%=remark.username%></td>
+                    <td><%=remark.remarkerid%></td>
+                    <td><%=remark.remarkername%></td>
+                    <td><%=remark.remarktext%></td>
                     <td>
-                    <input data-id="<%=user.ID %>" type="button" value="删除" class="de_button" />
-                    <input data-id="<%=user.ID %>" type="button" value="修改" class="update_but" />
+                    <input data-id="<%=remark.ID %>" type="button" value="删除" class="de_button" />
+                    <input data-id="<%=remark.ID %>" type="button" value="修改" class="update_but" />
                     </td>
                 </tr>
             <% }) %>
@@ -68,6 +68,6 @@
         </tfoot>
     </table>
 </div>
-<script  src="/javascripts/user.js"></script>
+    <script  src="/javascripts/remark.js"></script>
 </body>
 </html>

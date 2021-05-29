@@ -10,7 +10,7 @@
    <div>
     <!-- value="<%=obj.name %>" -->
     <!-- value="<%=obj.ID %>" -->
-       <form action="/admin/add"  method="POST"> 
+       <form action="/admin/add"  method="POST"> <!-- 这里admin是匹配路由的路径，/add则是匹配post请求方式下的路径 -->
            <input type="hidden" name="ID"  placeholder="请填写ID"  />
            <input type="text" name="name"  placeholder="请填写姓名" />
            <br/>

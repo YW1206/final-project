@@ -6,16 +6,19 @@
 	<link rel="stylesheet" type="text/css" href="/stylesheets/admin.css">
 </head>
 <body>
-    <input class="user" id="user" type="button" value="用户操作"/>
-    <input class="mark" id="mark" type="button" value="评论操作"/>
+    <div> 
     <div class="search"> 
     <h4 class="ID">ID:</h4>
-    <input   id="clean" type="text" class="ID_1" placeholder="请输入ID" name="ID">
+    <input id="clean_admin" type="text" class="ID_1" placeholder="请输入ID" name="ID" />
     <h4 class="name">用户名:</h4>
-    <input id="clear_1" type="text" class="c1" placeholder="请输入用户名" name="name">
+    <input id="clear_1_admin" type="text" class="c1" placeholder="请输入用户名" name="name" />
     <div class="b3">
-        <button id="first"> <img width="20px" src="/images/search.png"/>查询</button>
+        <button id="first_admin"> <img width="20px" src="/images/search.png"/>查询</button>
         <button onclick="test()">清空</button>
+    </div>
+    <div class="user_1"> 
+    <button id="user" >用户操作</button>
+    <button id="mark" >评论操作</button>
     </div>
     </div>
 	<table>

@@ -1,10 +1,15 @@
-var express = require('express');
-var router = express.Router();
- 
+var express = require("express");
+var Router = express.Router();
+var db = require('../models/db');
 
-router.get('/', function(req, res, next) {
-    res.render('user');
+Router.get("/user",(req,res)=>{//路径二
+    let data="select * from user where status=1"
+    db.exe(data,[],function(err, results, fields){
+        console.log(results[0]);
+        res.render('user',{user:results}); 
+   
+    });
 });
 
 
-module.exports = router;
+module.exports = Router;

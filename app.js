@@ -14,9 +14,9 @@ var signupRouter = require('./routes/signup');
 var failRouter = require('./routes/404');
 var succRouter = require('./routes/true');
 var succ1Router = require('./routes/true1');
-var adminRouter = require('./routes/admin');
+var adminRouter = require('./routes/admin');//进入到某一个路由
 var userRouter = require('./routes/user');
-var markRouter = require('./routes/mark');
+var remarkRouter = require('./routes/remark');
 
 
 
@@ -49,10 +49,10 @@ app.use('/signup',signupRouter);
 app.use('/404',failRouter);
 app.use('/true',succRouter);
 app.use('/true1',succ1Router);
-app.use('/admin',adminRouter);
-app.use('/user',userRouter);
-app.use('/mark',markRouter);
- 
+app.use('/admin',adminRouter);//这里指path1,将其指定到某一个路由
+app.use('/user',userRouter);//路径一
+app.use('/remark',remarkRouter);
+//  
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -64,7 +64,7 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
+  console.log(err);//如果碰到有什么问题，就直接在这里打印一下问题就会更加明显的看见问题是什么
   // render the error page
   res.status(err.status || 500);
   res.render('error');
