@@ -6,7 +6,7 @@ var db = require('../models/db');
 router.get('/',(req,res,next) => {
     let data="select * from admination where status=1 order by ID desc limit 3"
     db.exe(data,[],function(err, results, fields){
-        res.render('admin',{detail:results}); 
+        res.render('admin',{detail:results}); //渲染页面不需要加斜杠/
         
     });
 });
@@ -22,7 +22,7 @@ router.get('/de/:id',(req,res) => {
             console.log(err);
         }else{
             console.log(result);
-            res.redirect('/admin');
+            res.redirect('/admin');//重定向到一个页面则需要加斜杠/
         }
     })
 });

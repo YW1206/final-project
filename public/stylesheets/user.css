@@ -180,97 +180,6 @@ td {
 .E tr{
    color:rgb(128, 112, 112)   
 }
-.E button:first-child{
-      background-color: rgb(53, 169, 223);
-      border:0;
-      width: 60px;
-      height: 33px;
-      color:white;
-      outline-color: white;
-      border-radius: 4px;
-}
-.E button:nth-child(2){
-    background-color: rgb(91, 190, 91);
-    border:0;
-    width: 60px;
-    height: 33px;
-    color:white;
-    outline-color: white;
-    border-radius: 4px;
-}
-.E button:nth-child(3){
-    background-color: rgb(231, 79, 52);
-    border:0;
-    width: 60px;
-    height: 33px;
-    color:white;
-    outline-color: white;
-    border-radius: 4px;
-}
-.E button:nth-child(4){
-    background-color: rgb(223, 178, 53);
-    border:0;
-    width: 80px;
-    height: 33px;
-    color:white;
-    outline-color: white;
-    border-radius: 4px;
-}
-.E td{
-    border-color:rgb(235, 226, 226);
-}
-.else{
-    display:none;
-    border: 2px solid red;
-    width: 600px;
-    height: 300px;
-}
- 
-.Q1{
-    position: relative;
-    left: 30px;
-}
-.Q1 h4{
-    display: inline-block;
-}
-.Q2{
-    position: relative;
-    left: 30px;
-}
-.Q2 h4{
-    display: inline-block;
-}
-.Q3{
-    position: relative;
-    left: 30px;
-}
-.Q3 h4{
-    display: inline-block;
-}
-.Q4{
-    position: relative;
-    left: 350px;
-    top: -190px;
-}
-.Q4 h4{
-    display: inline-block;
-}
-.Q5{
-    position: relative;
-    left: 350px;
-    top: -150px;
-}
-.Q5 h4{
-    display: inline-block;
-}
-.Q6{
-    position: relative;
-    left: 350px;
-    top: -120px;
-}
-.Q6 h4{
-    display: inline-block;
-}
 .name{
     position: relative;
     top: 50px;
@@ -324,7 +233,14 @@ td {
     display: inline-block;
     color: #16aedc;
 }
-.back{
+.back_user{
     position:relative;
-    left:100px;
+    left: 620px;
+    top: 17px;
+    background-color: rgb(53, 169, 223);
+    padding: 10px 15px;
+    color: white;
+    border: 0;
+    outline-color: #16aedc;
+    border-radius: 4px;
 }

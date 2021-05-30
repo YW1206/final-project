@@ -17,6 +17,7 @@ var succ1Router = require('./routes/true1');
 var adminRouter = require('./routes/admin');//进入到某一个路由
 var userRouter = require('./routes/user');
 var remarkRouter = require('./routes/remark');
+var myblogRouter = require("./routes/myblog");
 
 
 
@@ -52,11 +53,12 @@ app.use('/true1',succ1Router);
 app.use('/admin',adminRouter);//这里指path1,将其指定到某一个路由
 app.use('/user',userRouter);//路径一
 app.use('/remark',remarkRouter);
-//  
+app.use("/myblog",myblogRouter);
+ 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  next( createError(404));
 });
 
 // error handler

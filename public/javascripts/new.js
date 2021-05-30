@@ -1,5 +1,5 @@
-document.getElementById('blog').onclick=function(){
-    window.location.href="blog";
+document.getElementById('myblog').onclick=function(){
+    window.location.href="/myblog";//这里的路径和html的名字没什么关系，和app.js里面的路由名字和路由文件里面写的请求方式的路径有关
 }
 document.getElementById('self').onclick=function(){
     window.location.href="self";

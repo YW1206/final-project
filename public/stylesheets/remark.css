@@ -2,7 +2,6 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-    /* background: url(/images/1.jpg); */
 }
 
 table {
@@ -303,33 +302,36 @@ td {
 }
 .user_1{
     position: relative;
-    left: 650px;
-    top: 17px;
-    background-color: rgb(53, 169, 223);
-    padding: 10px 10px;;
-    color: white;
-    border: 0;
+    left: 950px;
+    padding:  10px 10px;
+    border-color: #16aedc;
+    border-style: solid;
+    border-width: 1px;
     outline-color: #16aedc;
     border-radius: 4px;
+    display: inline-block;
+    color: #16aedc;
 }
 .mark_1{
     position: relative;
-    left: 650px;
+    left: 960px;
+    padding:  10px 10px;
+    border-color: #16aedc;
+    border-style: solid;
+    border-width: 1px;
+    outline-color: #16aedc;
+    border-radius: 4px;
+    display: inline-block;
+    color: #16aedc;
+}
+.back_remark{
+    position:relative;
+    left:620px;
     top:17px;
     background-color: rgb(53, 169, 223);
-    padding:10px 10px;;
+    padding: 10px 15px;
     color: white;
     border: 0;
     outline-color: #16aedc;
     border-radius: 4px;
 }
-.Welcome{
-    position: relative;
-    top: 150px;
-    left: 250px;
-}
-/* .all{ */
-    /* background: url(/images/back.jpg); */
-    /* background-attachment:local */
-    
-/* } */

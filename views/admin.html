@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <!-- lang="en" -->
 <head>
 	<meta charset="UTF-8">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/admin.css">
 </head>
 <body>
-    <div> 
+    <div class="all"> 
+    <div>
+        <h1 class="Welcome">Welcome to the administrator interface</h1> 
+    </div>
     <div class="search"> 
     <h4 class="ID">ID:</h4>
     <input id="clean_admin" type="text" class="ID_1" placeholder="请输入ID" name="ID" />
@@ -16,10 +20,10 @@
         <button id="first_admin"> <img width="20px" src="/images/search.png"/>查询</button>
         <button onclick="test()">清空</button>
     </div>
-    <div class="user_1"> 
-    <button id="user" >用户操作</button>
-    <button id="mark" >评论操作</button>
-    </div>
+    <!-- <div class="user_1">  -->
+    <button class="user_1" id="user" >用户操作</button>
+    <button class="mark_1" id="mark" >评论操作</button>
+    <!-- </div> -->
     </div>
 	<table>
 		<thead>
@@ -63,7 +67,9 @@
 				</td>
 			</tr>
 		</tfoot>
-	</table>
     <script  src="/javascripts/admina.js"></script>
+    </table>
+</div> 
 </body>
 </html>
+ 

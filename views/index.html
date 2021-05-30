@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/templatemo-style.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+<title>Home</title>
+</head>
+
+<body>
+<div class="fixed-header">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+			<a class="navbar-brand" href="https://www.jxuspt.com/">Jiangxi Software University</a>
+		</div>
+		<nav class="main-menu">
+			<ul>
+				<li><a href="#home">校园环境</a></li>
+				<li><a href="#services">今日大事</a></li>
+				<li><a href="#clients">社团招新</a></li>
+				<li><a href="#contact">学校新荣誉</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<!-- -----------------------------部分一---------------------- -->
+<div class="container">
+	<section class="col-md-12 content" id="home">
+	   <div class="col-lg-6 col-md-6 content-item">
+		   <img src="/images/1.jpg" alt="Image" class="tm-image">
+	   </div>
+	   <div class="col-lg-6 col-md-6 content-item content-item-1 background">
+		   <h2 class="main-title text-center dark-blue-text"><%=data.campu_title%></h2>
+           <p><%=data.campu_text%></p>
+		   <button type="button" class="btn btn-big dark-blue-bordered-btn">点赞</button>
+		   <button type="button" class="btn btn-big dark-blue-btn">收藏</button>
+           <button type="button" class="btn btn-big dark-blue-btn">评论</button>
+	   </div>
+   </section>
+<!-- -----------------------------部分二---------------------- -->
+   <section class="col-md-12 content padding" id="services">
+	<div class="col-lg-6 col-md-6 col-md-push-6 content-item">
+	   <img src="/images/2.jpg" alt="Image" class="tm-image">
+   </div>
+   <div class="col-lg-6 col-md-6 col-md-pull-6 content-item background flexbox">
+	   <h2 class="section-title"><%=data.event_title%></h2>
+	   <p class="section-text"><%=data.event_text%></p>
+	     
+	     
+        
+       <button type="button" class="btn dark-blue-bordered-btn normal-btn">点赞</button>
+       <button type="button" class="btn yellow-btn normal-btn">收藏</button>
+       <button type="button" class="btn green-btn normal-btn">评论</button>    
+   </div>
+
+</section>
+
+<!-- -----------------------------部分三---------------------- -->
+<section class="col-md-12 content" id="clients">
+   <div class="col-lg-6 col-md-6 content-item">
+	   <img src="/images/3.jpg" alt="Image" class="tm-image">
+   </div>
+   <div class="col-lg-6 col-md-6 content-item background flexbox">
+	   <h2 class="section-title"><%=data.club_title%></h2>
+	<p><%=data.club_text%></p>
+	   <div>
+		   <button type="button" class="btn dark-blue-bordered-btn normal-btn">点赞</button>
+		   <button type="button" class="btn yellow-btn normal-btn">收藏</button>
+		   <button type="button" class="btn green-btn normal-btn">评论</button>    
+	   </div>             
+   </div>
+</section>
+
+<!-- -----------------------------部分四---------------------- -->
+<section class="col-md-12 content" id="contact">
+   <div class="col-lg-6 col-md-6 col-md-push-6 content-item">
+	   <img src="/images/4.jpg" alt="Image" class="tm-image">
+   </div>
+   <div class="col-lg-6 col-md-6 col-md-pull-6 content-item background flexbox">
+	   <h2 class="section-title"><%=data.honor_title%></h2>
+	   <p class="margin-b-25"><%=data.honor_text%></p>
+       <button type="button" class="btn dark-blue-bordered-btn normal-btn">点赞</button>
+       <button type="button" class="btn yellow-btn normal-btn">收藏</button>
+       <button type="button" class="btn green-btn normal-btn">评论</button>    
+	<div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div>
+
+</div>
+
+</section>
+<!-- -----------------------------末尾---------------------- -->
+<footer class="col-md-12 content" id="externals">
+<div class="col-lg-6 col-md-6 last">
+<img src="/images/5_my.png" alt="Image" class="tm-image">
+</div>
+<div class="col-lg-6 col-md-6 background last about-text-container">
+<h2 class="section-title">About This Website</h2>
+<p class="about-text">This is a blog site about <a href="https://www.jxuspt.com/" target="_parent">Jiangxi Software University</a> students can discuss, suggest, complain, wish on this website</p>       
+</div>
+</footer>
+
+</div>
+
+<div class="text-center footer">
+<div class="container">学校地址：江西省南昌市先锋创客小镇 邮编：330041
+    电话：0791-83792966     传真：0791-87709377<a target="_blank" href="https://www.jxuspt.com/"></a></div>
+</div>
+
+<script src="/javascripts/jquery.min_my.js"></script>
+<script src="/javascripts/bootstrap.min_my.js"></script>
+<script src="/javascripts/jquery.singlePageNav.min_my.js"></script>
+
+<script>
+
+// Check scroll position and add/remove background to navbar
+function checkScrollPosition() {
+if($(window).scrollTop() > 50) {
+  $(".fixed-header").addClass("scroll");
+} else {        
+  $(".fixed-header").removeClass("scroll");
+}
+}
+
+$(document).ready(function () {   
+// Single page nav
+$('.fixed-header').singlePageNav({
+	offset: 59,
+	filter: ':not(.external)',
+	updateHash: true        
+});
+
+checkScrollPosition();
+
+// nav bar
+$('.navbar-toggle').click(function(){
+	$('.main-menu').toggleClass('show');
+});
+
+$('.main-menu a').click(function(){
+	$('.main-menu').removeClass('show');
+});
+});
+
+$(window).on("scroll", function() {
+checkScrollPosition();    
+});
+</script>
+</body>
+</html>
