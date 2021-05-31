@@ -15,6 +15,7 @@ var connect = mysql.createConnection({
 router.get('/', function(req, res, next) {
   res.render('item');
 });
+
 // router.get('/self', function(req, res, next) {
   // res.render('self');
 // });

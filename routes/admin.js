@@ -4,7 +4,7 @@ var db = require('../models/db');
  
 // -------------The front page displays the database data----------------------
 router.get('/',(req,res,next) => {
-    let data="select * from admination where status=1 order by ID desc limit 3"
+    let data="select * from admination where status=1 order by ID desc"
     db.exe(data,[],function(err, results, fields){
         res.render('admin',{detail:results}); //渲染页面不需要加斜杠/
         
@@ -32,8 +32,8 @@ router.get('/de/:id',(req,res) => {
         res.render('add',{obj:{},id:""});
     });
     router.post('/add',(req,res) => {
-        let dog="insert into admination(name,BlogID,Blog,email,phnoe) value(?,?,?,?,?) ";
-        let cat=[req.body.name,req.body.BlogID,req.body.Blog,req.body.email,req.body.phnoe];
+        let dog="insert into admination(name,BlogID,Blog,email,phone) value(?,?,?,?,?) ";
+        let cat=[req.body.name,req.body.BlogID,req.body.Blog,req.body.email,req.body.phone];
         db.exe(dog,cat,(err,results,fields)=>{
             if(err){
                 console.log(err);
@@ -67,28 +67,28 @@ router.post('/update',(req,res) => {
  
  
 // -------------paging--------------------------------
-router.get("/nextPage",(req,res)=>{
-    let lion="select * from admination where status=1  order by ID desc limit 3,4 ";
-    db.exe(lion,"",(err,result)=>{
-        if(err){
-            console.log(err);
-        }else{
-            res.render('admin',{detail:result});
-        }
-    })
-});
+// router.get("/nextPage",(req,res)=>{
+    // let lion="select * from admination where status=1  order by ID desc limit 3,4 ";
+    // db.exe(lion,"",(err,result)=>{
+        // if(err){
+            // console.log(err);
+        // }else{
+            // res.render('admin',{detail:result});
+        // }
+    // })
+// });
 
-router.get("/lastPage",(req,res)=>{
-    let lion="select * from admination where status=1  order by ID desc limit 3 ";
+// router.get("/lastPage",(req,res)=>{
+    // let lion="select * from admination where status=1  order by ID desc limit 3 ";
     // let page=[a*5,5]
-    db.exe(lion,"",(err,result)=>{
-        if(err){
-            console.log(err);
-        }else{
-            res.render('admin',{detail:result});
-        }
-    })
-});
+    // db.exe(lion,"",(err,result)=>{
+        // if(err){
+            // console.log(err);
+        // }else{
+            // res.render('admin',{detail:result});
+        // }
+    // })
+// });
 
 router.get("/query",(req,res)=>{
     let banana="select * from admination where id=?";

@@ -13,9 +13,9 @@
     <div> 
         <h1>Welcome to the administrator interface </h1>
         <ul class="nav nav-tabs">
-            <li ><a href="/admin">BLOG</a></li>
-           <li class="active"><a id="user">USER</a></li>
-           <li><a id="mark">REMARK</a></li>
+           <li class="active"><a href="#">BLOG</a></li>
+           <li><a class="mark_1" id="mark">USER</a></li>
+           <li ><a class="user_1" id="user">REMARK</a></li>
         </ul>
     </div>
     <div class="all"> 
@@ -29,48 +29,48 @@
         <button class="btn btn-default" id="first_admin">查询</button>
         <button class="btn btn-default" id="clear" onclick="test()">清空</button>
     </div>
-    <button class="btn btn-default" id="add_user">添加</button>
+    <button class="btn btn-default" id="add">添加</button>
     </div>
 	<table class="table table-striped table-bordered table-hover table-condensed">
 		<thead>
             <tr>
                 <td>id</td>
-                <td>name</td>
-                <td>age</td>
-                <td>birth</td>
-                <td>address</td>
-                <td>email</td>
-                <td>phone</td>
+                <td>blogid</td>
+                <td>user's id</td>
+                <td>user's name</td>
+                <td>remarker's id</td>
+                <td>remarker's name</td>
+                <td>remarktext</td>
                 <td>请操作</td>
             </tr>
 		</thead>
 		<tbody>
-			<%  user.forEach((user,i) => { %>
+			<%  remark.forEach((remark,i) => { %>
                 <tr>
-                    <td><%=user.id%></td>
-                    <td><%=user.name%></td>
-                    <td><%=user.age%></td>
-                    <td><%=user.birth%></td>
-                    <td><%=user.address%></td>
-                    <td><%=user.email%></td>
-                    <td><%=user.phone%></td>
+                    <td><%=remark.id%></td>
+                    <td><%=remark.blogid%></td>
+                    <td><%=remark.userid%></td>
+                    <td><%=remark.username%></td>
+                    <td><%=remark.remarkerid%></td>
+                    <td><%=remark.remarkername%></td>
+                    <td><%=remark.remarktext%></td>
                     <td>
-					<input data-id="<%=user.id %>" type="button" value="删除" class="de_button" />
-					<input data-id="<%=user.id %>" type="button" value="修改" class="update_button"/>
-				    </td>
+                    <input data-id="<%=remark.ID %>" type="button" value="删除" class="de_button" />
+                    <input data-id="<%=remark.ID %>" type="button" value="修改" class="update_but" />
+                    </td>
                 </tr>
             <% }) %>
 		</tbody>
 		<tfoot>
 			<tr>
-				<td colspan="8">
+				<td colspan="7">
                       <input type="button" value="上一页" id="lastPage"/>
                       <input type="button" value="下一页" id="nextPage"/> 
 				</td>
 			</tr>
 		</tfoot>
     </table>
-    <script  src="/javascripts/user.js"></script>
+    <script  src="/javascripts/admina.js"></script>
     </div>
 </div> 
 </body>

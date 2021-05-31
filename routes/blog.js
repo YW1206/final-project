@@ -6,5 +6,8 @@ router.get('/', function(req, res, next) {//这里也不能乱写，这里必须
     res.render('blog');
 });
 
+router.get("/con",function(req,res){
+    res.render("contro");
+  })
 
 module.exports = router;

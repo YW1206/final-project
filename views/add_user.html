@@ -8,15 +8,17 @@
 </head>
 <body>
    <div>
-       <form action="/admin/add"  method="POST"> <!-- 这里admin是匹配路由的路径，/add则是匹配post请求方式下的路径 -->
-           <input type="hidden" name="ID"  placeholder="请填写ID"  />
+       <form action="/user/add_user"  method="POST"> <!-- 这里admin是匹配路由的路径，/add则是匹配post请求方式下的路径 -->
+           <input type="hidden" name="ID"   />
            <input type="text" name="name"  placeholder="请填写姓名" />
            <br/>
-           <input type="int" name="BlogID" placeholder="请填写博客ID" />
+           <input type="int" name="age" placeholder="请填写age" />
            <br/>
-           <input type="text" name="Blog" placeholder="请填写博客内容" />
+           <input type="text" name="birth" placeholder="请填写birth" />
            <br/>
-           <input type="text" name="email" placeholder="请填写Email" />
+           <input type="text" name="address" placeholder="请填写address" />
+           <br/>
+           <input type="number" name="email" placeholder="请填写Email" />
            <br/>
            <input type="number" name="phone" placeholder="请填写电话号码" />
            <br/>

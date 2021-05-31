@@ -14,7 +14,7 @@ router.post('/',(req,res)=>{
         if(err){
             console.log(err);
         }else{
-            req.session.user = row; 
+            req.session.User = row; 
             res.redirect('/true1');
         }
     })

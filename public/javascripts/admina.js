@@ -1,6 +1,6 @@
 function test(){
-    document.getElementById("clean").value="";    
-    document.getElementById("clear_1").value="";
+    document.getElementById("clean_admin").value="";    
+    document.getElementById("clear_1_admin").value="";
     document.getElementById("clear_2").value="";
 }
 document.getElementById('add').onclick = function(){
@@ -21,7 +21,7 @@ Array.from(document.getElementsByClassName('de_button')).forEach(i => {
         window.location.href="/admin/de/"+index;
     };
 });
-
+ 
 Array.from(document.getElementsByClassName('update_button')).forEach(i => {
     i.onclick = function(){
         let index=(this.getAttribute("data-id"));

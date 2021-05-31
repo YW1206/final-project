@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <!-- lang="en" -->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/remark.css">
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/admin.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+    <script  src="/javascripts/bootstrap.min.js"></script>
 </head>
 <body>
     <div> 
-    <div> 
-        <div class="search"> 
-        <h4 class="ID">ID:</h4>
-        <input  id="clean" type="text" class="ID_1" placeholder="请输入ID" name="ID">
-        <h4 class="name">用户名:</h4>
-        <input id="clear_1" type="text" class="c1" placeholder="请输入用户名" name="name">
-        <div class="b3">
-            <button id="first"> <img width="20px" src="/images/search.png"/>查询</button>
-            <button onclick="test()">清空</button>
-        </div>
-        <button class="back_remark" id="remark_back">返回首页</button>
-        </div>
+        <h1>Welcome to the administrator interface </h1>
+        <ul class="nav nav-tabs">
+           <li><a href="/admin">BLOG</a></li>
+           <li ><a id="user">USER</a></li>
+           <li class="active"><a id="remark">REMARK</a></li>
+        </ul>
     </div>
-    <table>
-        <thead>
-            <tr>
-                <td colspan="8">
-                    <button id="add">添加</button>
-                    <!-- <a href="add.html"></a> -->
-                </td>
-            </tr>
+    <div class="all"> 
+    <div class="form-group"  > 
+    <input id="clean_admin" type="text" class="form-control" placeholder="请输入ID" name="ID" />
+    </div>
+    <div class="form-group"> 
+    <input id="clear_1_admin" type="text" class="form-control" placeholder="请输入用户名" name="name" />
+    </div>
+    <div class="b3">
+        <button class="btn btn-default" id="first_admin">查询</button>
+        <button class="btn btn-default" id="clear" onclick="test()">清空</button>
+    </div>
+    <button class="btn btn-default" id="add">添加</button>
+    </div>
+	<table class="table table-striped table-bordered table-hover table-condensed">
+		<thead>
             <tr>
                 <td>id</td>
                 <td>blogid</td>
@@ -40,9 +43,9 @@
                 <td>remarktext</td>
                 <td>请操作</td>
             </tr>
-        </thead>
-        <tbody>
-            <% remark.forEach((remark,i) => { %>
+		</thead>
+		<tbody>
+			<%  remark.forEach((remark,i) => { %>
                 <tr>
                     <td><%=remark.id%></td>
                     <td><%=remark.blogid%></td>
@@ -52,22 +55,24 @@
                     <td><%=remark.remarkername%></td>
                     <td><%=remark.remarktext%></td>
                     <td>
-                    <input data-id="<%=remark.ID %>" type="button" value="删除" class="de_button" />
-                    <input data-id="<%=remark.ID %>" type="button" value="修改" class="update_but" />
+                    <input data-id="<%=remark.id %>" type="button" value="删除" class="de_button" />
+                    <input data-id="<%=remark.id %>" type="button" value="修改" class="update_button" />
                     </td>
                 </tr>
             <% }) %>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="8">
-                      <input type="button" value="上一页"  />
-                      <input type="button" value="下一页"  /> 
-                </td>
-            </tr>
-        </tfoot>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="8">
+                      <input type="button" value="上一页" id="lastPage"/>
+                      <input type="button" value="下一页" id="nextPage"/> 
+				</td>
+			</tr>
+		</tfoot>
     </table>
-</div>
     <script  src="/javascripts/remark.js"></script>
+    </div>
+</div> 
 </body>
 </html>
+ 
