@@ -14,8 +14,8 @@
         <h1>Welcome to the administrator interface </h1>
         <ul class="nav nav-tabs">
            <li><a href="/admin">BLOG</a></li>
-           <li ><a id="user">USER</a></li>
-           <li class="active"><a id="remark">REMARK</a></li>
+           <li ><a id="remark_user">USER</a></li>
+           <li class="active"><a id="remark_remark">REMARK</a></li>
         </ul>
     </div>
     <div class="all"> 
@@ -29,7 +29,8 @@
         <button class="btn btn-default" id="first_admin">查询</button>
         <button class="btn btn-default" id="clear" onclick="test()">清空</button>
     </div>
-    <button class="btn btn-default" id="add">添加</button>
+    <!-- <button class="btn btn-default" id="add_remark">添加</button> -->
+    <button id="add_remark">添加</button>
     </div>
 	<table class="table table-striped table-bordered table-hover table-condensed">
 		<thead>
@@ -55,8 +56,8 @@
                     <td><%=remark.remarkername%></td>
                     <td><%=remark.remarktext%></td>
                     <td>
-                    <input data-id="<%=remark.id %>" type="button" value="删除" class="de_button" />
-                    <input data-id="<%=remark.id %>" type="button" value="修改" class="update_button" />
+                    <input data-id="<%=remark.id %>" type="button" value="删除" class="de_remark" />
+                    <input data-id="<%=remark.id %>" type="button" value="修改" class="up_remark" />
                     </td>
                 </tr>
             <% }) %>

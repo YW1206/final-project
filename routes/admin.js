@@ -55,8 +55,8 @@ router.get('/update',(req,res)=>{ //由于这里的路径出现了问题，所�
     } )
 });
 router.post('/update',(req,res) => {
-    let dog="update admination set name=?,BlogID=?,Blog=?,email=?,phnoe=? where id="+req.body.ID;//通过传id的值，不去进行插入，而是直接update
-    let cat=[req.body.name,req.body.BlogID,req.body.Blog,req.body.email,req.body.phnoe,req.body.ID];
+    let dog="update admination set name=?,BlogID=?,Blog=?,email=?,phone=? where id="+req.body.ID;//通过传id的值，不去进行插入，而是直接update
+    let cat=[req.body.name,req.body.BlogID,req.body.Blog,req.body.email,req.body.phone,req.body.ID];
     db.exe(dog,cat,(err,results,fields)=>{
         if(err){
             console.log(err);

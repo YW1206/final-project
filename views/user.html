@@ -14,8 +14,8 @@
         <h1>Welcome to the administrator interface </h1>
         <ul class="nav nav-tabs">
             <li ><a href="/admin">BLOG</a></li>
-           <li class="active"><a id="user">USER</a></li>
-           <li><a id="mark">REMARK</a></li>
+           <li class="active"><a id="user_user">USER</a></li>
+           <li><a id="user_mark">REMARK</a></li>
         </ul>
     </div>
     <div class="all"> 
@@ -55,8 +55,8 @@
                     <td><%=user.email%></td>
                     <td><%=user.phone%></td>
                     <td>
-					<input data-id="<%=user.id %>" type="button" value="删除" class="de_button" />
-					<input data-id="<%=user.id %>" type="button" value="修改" class="update_button"/>
+					<input data-id="<%=user.id %>" type="button" value="删除" class="de_user" />
+					<input data-id="<%=user.id %>" type="button" value="修改" class="update_user"/>
 				    </td>
                 </tr>
             <% }) %>

@@ -9,7 +9,6 @@
 <body>
    <div>
        <form action="/admin/update"  method="POST"> 
-        <!-- <%=data.name %> -->
            <input type="hidden" name="ID" value="<%=data.ID %>" placeholder="请填写ID"  />
            <input type="text" name="name" value="<%=data.name %>" placeholder="请填写姓名" />
            <br/>
@@ -19,7 +18,7 @@
            <br/>
            <input type="text" name="email" value="<%=data.email %>" placeholder="请填写Email" />
            <br/>
-           <input type="number" name="phnoe" value="<%=data.phnoe %>" placeholder="请填写电话号码" />
+           <input type="number" name="phone" value="<%=data.phone %>" placeholder="请填写电话号码" />
            <br/>
            <input type="submit" placeholder="请提交" />
        </form>

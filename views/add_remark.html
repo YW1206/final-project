@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+       <form action="/remark/add_remark"  method="POST"> <!-- 这里admin是匹配路由的路径，/add则是匹配post请求方式下的路径 -->
+           <input type="hidden" name="id"   />
+           <input type="text" name="blogid"  placeholder="请填写blogid" />
+           <br/>
+           <input type="int" name="userid" placeholder="请填写userid" />
+           <br/>
+           <input type="text" name="username" placeholder="请填写username" />
+           <br/>
+           <input type="text" name="remarkerid" placeholder="请填写remarkerid" />
+           <br/>
+           <input type="number" name="remarkername" placeholder="请填写remarkername" />
+           <br/>
+           <input type="number" name="remarktext" placeholder="请填写remarktext" />
+           <br/>
+           <input type="submit" placeholder="请提交" />
+       </form>
+   </div>
+</body>
+</html>
