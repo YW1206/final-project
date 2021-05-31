@@ -1,7 +1,5 @@
 function test(){
-    document.getElementById("clean_admin").value="";    
-    document.getElementById("clear_1_admin").value="";
-    document.getElementById("clear_2").value="";
+    document.getElementById("clear").value="";    
 }
 document.getElementById('add').onclick = function(){
     window.location.href="/admin/add";
@@ -37,13 +35,6 @@ document.getElementById('user').onclick=function(){
 
 document.getElementById('mark').onclick=function(){
     window.location.href="/remark/remark";
-}
-
-document.getElementById("first_admin").onclick=function(){
-    let a = document.getElementById("clean_admin").value
-    let b = document.getElementById("clear_1_admin").value
-    window.location.href="/admin/query?id="+a;
-
 }
 
 

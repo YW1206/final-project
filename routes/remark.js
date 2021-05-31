@@ -34,7 +34,6 @@ router.get('/de_remark/:id',(req,res) => {
         if(err){
             console.log(err);
         }else{
-            console.log(result);
             res.redirect('/remark/remark');//重定向到一个页面则需要加斜杠/
         }
     })
@@ -62,5 +61,17 @@ router.post('/up-remark',(req,res) => {
             res.redirect("/remark/remark");
         }
 })}); 
+
+router.post("/remark_query",(req,res)=>{
+    let remark_banana="select * from remark where id=?";
+    let remark_data=[req.body.remark_ID];
+    db.exe(remark_banana,remark_data,(err,reslut)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.render("remark_query",{remark_detail:reslut});
+        }
+    })
+});
 
 module.exports = router;

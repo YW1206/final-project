@@ -2261,12 +2261,12 @@ th {
   text-align: left;
 }
 .table {
-  width: 85%;
+  width: 90%;
   max-width: 100%;
   margin-bottom: 20px;
   position: relative;
-  left: 100px;
-  top: -70px;
+  left: 55px;
+  top: 60px;
   text-align: center;
 }
 .table > thead > tr > th,

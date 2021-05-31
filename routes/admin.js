@@ -90,17 +90,18 @@ router.post('/update',(req,res) => {
     // })
 // });
 
-router.get("/query",(req,res)=>{
-    let banana="select * from admination where id=?";
-    let data=[req.query.ID];
-    db.exe(banana,data,(err,reslut)=>{
+
+router.post("/query",(req,res)=>{
+    let query_banana="select * from admination where id=?";
+    let query_data=[req.body.ID];
+    db.exe(query_banana,query_data,(err,reslut)=>{
         if(err){
             console.log(err);
         }else{
-            console.log(reslut);//拿到的值为空，没有数据，是一个空数组？？？
-            res.render("admin",{detail:reslut});
+            res.render("query",{query_detail:reslut});
         }
     })
 });
+
 
 module.exports = router;

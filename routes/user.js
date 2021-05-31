@@ -34,7 +34,6 @@ router.get('/de_user/:id',(req,res) => {
         if(err){
             console.log(err);
         }else{
-            console.log(result);
             res.redirect('/user/user');//重定向到一个页面则需要加斜杠/
         }
     })
@@ -63,5 +62,17 @@ router.post('/up-user',(req,res) => {
         }
 })}); 
  
+router.post("/user_query",(req,res)=>{
+    let user_banana="select * from user where id=?";
+    let user_data=[req.body.user_ID];
+    db.exe(user_banana,user_data,(err,reslut)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.render("user_query",{user_detail:reslut});
+        }
+    })
+});
+
 
 module.exports = router;

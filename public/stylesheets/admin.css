@@ -17,17 +17,34 @@ left: 350px;
 #clear{
     width: 70px;
     height: 40px;
+    position: relative;
+    top: 45px;
+        left: 115px;
 }
 #first_admin{
     width: 70px;
 height: 40px;
 }
 #add{
+width: 75px;
+    height: 40px;
+    position: relative;
+    top: 45px;
+        left: 140px;
+}
+#add_user{
+    width: 70px;
+    height: 40px;
+    position: relative;
+    top: 45px;
+        left: 140px;
+}
+#add_remark{
     width: 70px;
 height: 40px;
 position: relative;
-top: -90px;
-left: 500px;
+top: 45px;
+    left: 140px;
 }
 .de_button{
     color: #333;
@@ -53,6 +70,52 @@ left: 500px;
     border: 1px solid transparent;
     border-radius: 4px;
 }
+.de_remark{
+    color: #333;
+background-color: #d4d4d4;
+border-color: #8c8c8c;
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+.de_user{color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;}
 .update_button{
     color: #333;
     background-color: #d4d4d4;
@@ -77,9 +140,88 @@ left: 500px;
     border: 1px solid transparent;
     border-radius: 4px;
 }
+.up_remark{
+    color: #333;
+background-color: #d4d4d4;
+border-color: #8c8c8c;
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+.update_user{
+    color: #333;
+background-color: #d4d4d4;
+border-color: #8c8c8c;
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+}
 .all{
     position: relative;
     left: -100px;
+}
+#query{
+    position: relative;
+    top: 55px;
+    left: -50px;
+    width: 150px;
+    height: 40px;
+}
+#input_query{
+    display: inline-block;
+    position: relative;
+    width: 75px;
+    height: 40px;
+        top: 55px;
+        left: -45px;
+}
+.form{
+    display:inline-block;
+    position: relative;
+top: -10px;
+left: 150px;
+}
+#table_query{
+    position: relative;
+    top: 40px;
+    left: 80px;
+}
+#table_user{
+    position: relative;
+top: 40px;
+left: 80px;
 }
  
  

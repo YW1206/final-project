@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <!-- lang="en" -->
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/admin.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+    <script  src="/javascripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div> 
+        <h1>Welcome to the administrator interface </h1>
+        <ul class="nav nav-tabs">
+           <li class="active"><a href="#">BLOG</a></li>
+           <li ><a class="user_1"  >USER</a></li>
+           <li><a class="mark_1"  >REMARK</a></li>
+        </ul>
+    </div>
+	<table id="table_remark" class="table table-striped table-bordered table-hover table-condensed">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>blogid</th>
+				<th>user's id</th>
+				<th>username</th>
+                <th>remarkerid</th>
+				<th>remarkername</th>
+                <th>remarktext</th>
+                <th>请操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%  remark_detail.forEach((d,i) => { %>
+                <tr>
+                    <td><%=d.id%></td>
+                    <td><%=d.blogid%></td>
+                    <td><%=d.userid%></td>
+                    <td><%=d.username%></td>
+                    <td><%=d.remarkerid%></td>
+                    <td><%=d.remarkername%></td>
+                    <td><%=d.remarktext%></td>
+                    <td>
+					<input data-id="<%=d.id %>" type="button" value="删除" class="de_button" />
+					<input data-id="<%=d.id %>" type="button" value="修改" class="update_button"/>
+				    </td>
+                </tr>
+            <% }) %>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="8">
+                      <input type="button" value="上一页" id="lastPage"/>
+                      <input type="button" value="下一页" id="nextPage"/> 
+				</td>
+			</tr>
+		</tfoot>
+    </table>
+    <script  src="/javascripts/admina.js"></script>
+    </div>
+</div> 
+</body>
+</html>
+ 
