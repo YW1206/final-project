@@ -1,29 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<link href="/stylesheets/style_new.css" rel='stylesheet' type='text/css' media="all" />
 </head>
 <body>
-   <div>
-       <form action="/user/add_user"  method="POST"> <!-- 这里admin是匹配路由的路径，/add则是匹配post请求方式下的路径 -->
-           <input type="hidden" name="ID"   />
-           <input type="text" name="name"  placeholder="请填写姓名" />
-           <br/>
-           <input type="int" name="age" placeholder="请填写age" />
-           <br/>
-           <input type="text" name="birth" placeholder="请填写birth" />
-           <br/>
-           <input type="text" name="address" placeholder="请填写address" />
-           <br/>
-           <input type="number" name="email" placeholder="请填写Email" />
-           <br/>
-           <input type="number" name="phone" placeholder="请填写电话号码" />
-           <br/>
-           <input type="submit" placeholder="请提交" />
-       </form>
-   </div>
+<h1>USER Add Form</h1>
+<div class="log">
+	<div class="content2">
+		<h2>USER Add Form</h2>
+		<form action="/user/add_user"  method="POST">
+            <input type="hidden" name="ID" />
+			<input type="text" name="name" placeholder="USERNAME"/>
+			<input type="text" name="age" placeholder="age"/>
+			<input type="text" name="birth" placeholder="birth" />
+            <input type="text" name="address" placeholder="address" />
+			<input type="text" name="email" placeholder="Email" />
+            <input type="text" name="phone" placeholder="phone" />
+			<input type="submit" class="register" placeholder="提交">
+		</form>
+	</div>
+</div>
 </body>
 </html>

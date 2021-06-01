@@ -1,29 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<link href="/stylesheets/style_new.css" rel='stylesheet' type='text/css' media="all" />
 </head>
 <body>
-   <div>
-       <form action="/remark/up-remark"  method="POST"> 
-           <input type="hidden" name="id" value="<%=remark.id %>" placeholder="请填写ID"  />
-           <input type="text" name="blogid" value="<%=remark.blogid %>" placeholder="请填写blogid" />
-           <br/>
-           <input type="int" name="userid" value="<%=remark.userid %>" placeholder="请填写userid" />
-           <br/>
-           <input type="text" name="username" value="<%=remark.username %>" placeholder="请填写username" />
-           <br/>
-           <input type="text" name="remarkerid" value="<%=remark.remarkerid %>" placeholder="请填写remarkerid" />
-           <br/>
-           <input type="text" name="remarkername" value="<%=remark.remarkername %>" placeholder="请填写remarkername" />
-           <br/>
-           <input type="number" name="remarktext" value="<%=remark.remarktext %>" placeholder="请填写remarktext" />
-           <br/>
-           <input type="submit" placeholder="请提交" />
-       </form>
-   </div>
+<h1>REMARK Update Form</h1>
+<div class="log">
+	<div class="content2">
+		<h2>REMARK Update Form</h2>
+		<form action="/remark/up-remark"  method="POST">
+            <input type="hidden" value="<%=remark.id %>" name="id" />
+			<input type="text" name="blogid" value="<%=remark.blogid %>"   />
+			<input type="text" name="userid" value="<%=remark.userid %>"  />
+			<input type="text" name="username"  value="<%=remark.username %>" />
+            <input type="text" name="remarkerid" value="<%=remark.remarkerid %>" />
+			<input type="text" name="remarkername" value="<%=remark.remarkername %>"  />
+            <input type="text" name="remarktext" value="<%=remark.remarktext %>"  />
+			<input type="submit" class="register" placeholder="提交">
+		</form>
+	</div>
+</div>
 </body>
 </html>

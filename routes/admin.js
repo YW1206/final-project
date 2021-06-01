@@ -90,7 +90,7 @@ router.post('/update',(req,res) => {
     // })
 // });
 
-
+// ------------------select-------------------------
 router.post("/query",(req,res)=>{
     let query_banana="select * from admination where id=?";
     let query_data=[req.body.ID];

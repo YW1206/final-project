@@ -2,6 +2,10 @@ var express = require("express");
 var router = express.Router();
 var db = require('../models/db');
 
+router.get("/",(req,res)=>{
+    res.render("new");
+})
+
 router.get("/user",(req,res)=>{//路径二
     let data="select * from user where status=1"
     db.exe(data,[],function(err, results, fields){
@@ -62,6 +66,8 @@ router.post('/up-user',(req,res) => {
         }
 })}); 
  
+// ------------------select-------------------------
+
 router.post("/user_query",(req,res)=>{
     let user_banana="select * from user where id=?";
     let user_data=[req.body.user_ID];

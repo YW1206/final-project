@@ -47,7 +47,7 @@ router.get('/up-remark',(req,res)=>{ //由于这里的路径出现了问题，�
         if(err){
             console.log(err);
         }else{
-            res.render('up-remark',{remark:remark[0]});}//这里打印出来的data是一个数组，所以应该拿到里面的第一个值，再进行传参
+            res.render('new',{remark:remark[0]});}//这里打印出来的data是一个数组，所以应该拿到里面的第一个值，再进行传参
             //渲染文件时不需要用/，在重定向和get或post请求方式等才需要使用/
     } )
 });
@@ -61,6 +61,9 @@ router.post('/up-remark',(req,res) => {
             res.redirect("/remark/remark");
         }
 })}); 
+
+
+// ------------------select-------------------------
 
 router.post("/remark_query",(req,res)=>{
     let remark_banana="select * from remark where id=?";
