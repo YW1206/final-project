@@ -2,24 +2,55 @@ var express = require("express");
 var router = express.Router();
 var db = require('../models/db');
 
+
+// ------------- 校园-------------------
 router.get("/",(req,res)=>{
     res.render("sendblog_campu");
-})
+});
 
+// ------ 发送博客-----
+router.get("/showblog",(req,res)=>{
+    let apple="select * from campu"
+    db.exe(apple,"",(err,data)=>{
+    res.render('index',{data:data});
+    })
+});
+
+
+router.post('/send', function(req, res, next) { 
+    let send_cat="insert into campu(campu_title,campu_text)  values(?,?)"
+    let send_dog=[req.body.campu_title,req.body.campu_text];
+    db.exe(send_cat,send_dog,(err,data)=>{
+        if(err){
+            console.log(err);
+        }else{
+            console.log(data);
+            res.redirect("/send_blog/showblog")
+        }
+    })
+  });
+
+
+  router.post("/like",(req,res)=>{
+      let like="update campu set campu_like=campu_like+1";
+      db.exe(like,"",(err,data)=>{
+          if(err){
+              console.log(err);
+          }else{
+              console.log(data);
+              res.redirect("/send_blog/showblog");
+          }
+      })
+  })
+
+
+
+// ------------- 社团-------------------
 router.get("/club",(req,res)=>{
     res.render("sendblog_club");
-})
+});
 
-router.get("/event",(req,res)=>{
-    res.render("sendblog_event");
-})
-
-router.get("/honor",(req,res)=>{
-    res.render("sendblog_honor");
-})
-
-
-// -------------社团发送博客的功能-------------------
+// ----- 发送博客 ------
 router.get("/showblog_club",(req,res)=>{
     let apple_club="select * from club"
     db.exe(apple_club,"",(err,club)=>{
@@ -38,9 +69,18 @@ router.post("/club",(req,res)=>{
             res.redirect("/send_blog/showblog_club");
         }
     })
-})
+});
 
-// -------------事件发送博客的功能-------------------
+
+
+
+ 
+// -------------校园大事-------------------
+router.get("/event",(req,res)=>{
+    res.render("sendblog_event");
+});
+
+// ----- 发送博客 -----
 router.get("/showblog_event",(req,res)=>{
     let apple_event="select * from event"
     db.exe(apple_event,"",(err,event)=>{
@@ -62,7 +102,14 @@ router.post("/event",(req,res)=>{
 })
 
 
-// -------------荣誉发送博客的功能-------------------
+
+
+// -------------荣誉-------------------
+router.get("/honor",(req,res)=>{
+    res.render("sendblog_honor");
+});
+
+// -----发送博客-----
 router.get("/showblog_honor",(req,res)=>{
     let apple_honor="select * from honor"
     db.exe(apple_honor,"",(err,honor)=>{
@@ -83,27 +130,6 @@ router.post("/honor",(req,res)=>{
     })
 })
 
-// -------------校园发送博客的功能-------------------
-router.get("/showblog",(req,res)=>{
-    let apple="select * from campu"
-    db.exe(apple,"",(err,data)=>{
-    res.render('index',{data:data});
-    })
-});
-
-
-router.post('/send', function(req, res, next) { 
-    let send_cat="insert into campu(campu_title,campu_text)  values(?,?)"
-    let send_dog=[req.body.campu_title,req.body.campu_text];
-    db.exe(send_cat,send_dog,(err,data)=>{
-        if(err){
-            console.log(err);
-        }else{
-            console.log(data);
-            res.redirect("/send_blog/showblog")
-        }
-    })
-  });
 
 
 module.exports = router;

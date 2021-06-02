@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/stylesheets/templatemo-style.css">
 <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+<script  src="/javascripts/bootstrap.min.js"></script>
 <title>Home</title>
 </head>
 
@@ -42,9 +43,15 @@
 	   <div class="col-lg-6 col-md-6 content-item content-item-1 background">
 		   <h2 class="main-title text-center dark-blue-text"><%=data.campu_title%></h2>
            <p><%=data.campu_text%></p>
-		   <button type="button" class="btn btn-big dark-blue-bordered-btn">点赞</button>
+		   <form action="/send_blog/like"  method="POST"> 
+		   <input type="submit" class="form-control" value="💗">
+		   <h6 class="like_num"><%=data.campu_like %></h6>
+		   </form>
 		   <button type="button" class="btn btn-big dark-blue-btn">收藏</button>
            <button type="button" class="btn btn-big dark-blue-btn">评论</button>
+		   <!-- <form action="/send_blog/like"  method="POST"> -->
+			<!-- <input type="submit"  class="register" placeholder="提交"> -->
+		   <!-- </form> -->
 	   </div>
     </section>
 	<% }) %>

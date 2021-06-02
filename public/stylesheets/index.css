@@ -2,6 +2,15 @@
     position: relative;
     left: 100px;
 }
+.like_num{
+    position: relative;
+    left: 40px;
+    top: -40px;
+    font-size: large;
+}
+.form-control{
+    text-align: left;
+}
  
  
  
