@@ -42,9 +42,9 @@
 	   <div class="col-lg-6 col-md-6 content-item content-item-1 background">
 		   <h2 class="main-title text-center dark-blue-text"><%=club.club_title%></h2>
            <p><%=club.club_text%></p>
-		   <button type="button" class="btn btn-big dark-blue-bordered-btn">点赞</button>
+			<input club-id="<%=club.id %>" type="submit" class="like_club" value="💗">
+			<h6 class="like_num"><%=club.club_like %></h6>
 		   <button type="button" class="btn btn-big dark-blue-btn">收藏</button>
-           <button type="button" class="btn btn-big dark-blue-btn">评论</button>
 	   </div>
     </section>
 	<% }) %>

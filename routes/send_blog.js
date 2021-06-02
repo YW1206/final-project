@@ -10,7 +10,7 @@ router.get("/",(req,res)=>{
 
 // ------ 发送博客-----
 router.get("/showblog",(req,res)=>{
-    let apple="select * from campu"
+    let apple="select * from campu order by id desc"
     db.exe(apple,"",(err,data)=>{
     res.render('index',{data:data});
     })
@@ -24,20 +24,20 @@ router.post('/send', function(req, res, next) {
         if(err){
             console.log(err);
         }else{
-            console.log(data);
             res.redirect("/send_blog/showblog")
         }
     })
   });
 
-
-  router.post("/like",(req,res)=>{
-      let like="update campu set campu_like=campu_like+1";
-      db.exe(like,"",(err,data)=>{
+// ------ 点赞-----
+  router.get("/like/:id",(req,res)=>{
+      let like="update campu set campu_like=campu_like+1  where id=?";
+      let campu_like=[req.params.id];
+      console.log(campu_like);
+      db.exe(like,campu_like,(err,data)=>{
           if(err){
               console.log(err);
           }else{
-              console.log(data);
               res.redirect("/send_blog/showblog");
           }
       })
@@ -46,13 +46,13 @@ router.post('/send', function(req, res, next) {
 
 
 // ------------- 社团-------------------
-router.get("/club",(req,res)=>{
+router.get("/club",(req,res)=>{//跳转到发博客的网站
     res.render("sendblog_club");
 });
 
 // ----- 发送博客 ------
 router.get("/showblog_club",(req,res)=>{
-    let apple_club="select * from club"
+    let apple_club="select * from club order by id desc"
     db.exe(apple_club,"",(err,club)=>{
     res.render('index_club',{club:club});
     })
@@ -65,13 +65,22 @@ router.post("/club",(req,res)=>{
         if(err){
             console.log(err);
         }else{
-            console.log(data);
             res.redirect("/send_blog/showblog_club");
         }
     })
 });
-
-
+// ----- like ------
+router.get("/clublike/:id",(req,res)=>{
+    let like="update club set club_like=club_like+1 where id=?";
+    let club_like=[req.params.id];
+    db.exe(like,club_like,(err,data)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.redirect("/send_blog/showblog_club");
+        }
+    })
+})
 
 
  
@@ -82,7 +91,7 @@ router.get("/event",(req,res)=>{
 
 // ----- 发送博客 -----
 router.get("/showblog_event",(req,res)=>{
-    let apple_event="select * from event"
+    let apple_event="select * from event order by id desc"
     db.exe(apple_event,"",(err,event)=>{
     res.render('index_event',{event:event});
     })
@@ -95,12 +104,22 @@ router.post("/event",(req,res)=>{
         if(err){
             console.log(err);
         }else{
-            console.log(data);
             res.redirect("/send_blog/showblog_event");
         }
     })
 })
-
+// ----- like ------
+router.get("/eventlike/:id",(req,res)=>{
+    let like="update event set event_like=event_like+1 where id=?";
+    let event_id=[req.params.id];
+    db.exe(like,event_id,(err,data)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.redirect("/send_blog/showblog_event");
+        }
+    })
+})
 
 
 
@@ -111,7 +130,7 @@ router.get("/honor",(req,res)=>{
 
 // -----发送博客-----
 router.get("/showblog_honor",(req,res)=>{
-    let apple_honor="select * from honor"
+    let apple_honor="select * from honor order by id desc"
     db.exe(apple_honor,"",(err,honor)=>{
     res.render('index_honor',{honor:honor});
     })
@@ -124,12 +143,23 @@ router.post("/honor",(req,res)=>{
         if(err){
             console.log(err);
         }else{
-            console.log(data);
+            
             res.redirect("/send_blog/showblog_honor");
         }
     })
 })
-
+// ----- like ------
+router.get("/honorlike/:id",(req,res)=>{
+    let like="update honor set honor_like=honor_like+1 where id=?";
+    let honor_id=[req.params.id];
+    db.exe(like,honor_id,(err,data)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.redirect("/send_blog/showblog_honor");
+        }
+    })
+})
 
 
 module.exports = router;

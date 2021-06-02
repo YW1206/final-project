@@ -11,7 +11,49 @@
 .form-control{
     text-align: left;
 }
+
+.like_club{
+    text-align: left;
+    box-shadow: none;
+    font-size: 16px;
+    height: auto;
+    padding: 8px 12px;
+    display: block;
+    width: 18%;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+};
  
- 
- 
+#like_event_1{
+    text-align: left;
+    box-shadow: none;
+    font-size: 16px;
+    height: auto;
+    padding: 8px 12px;
+    display: block;
+    width: 18%;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+};
+
+.like_campu{
+    text-align: left;
+    box-shadow: none;
+    font-size: 16px;
+    height: auto;
+    padding: 8px 12px;
+    display: block;
+    width: 18%;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+};
  

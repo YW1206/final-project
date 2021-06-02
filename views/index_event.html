@@ -42,9 +42,9 @@
 	   <div class="col-lg-6 col-md-6 content-item content-item-1 background">
 		   <h2 class="main-title text-center dark-blue-text"><%=event.event_title%></h2>
            <p><%=event.event_text%></p>
-		   <button type="button" class="btn btn-big dark-blue-bordered-btn">点赞</button>
+			<input event-id="<%=event.id %>" type="submit" class="like_event" id="like_event_1" value="💗" style="text-align: left;box-shadow: none;font-size: 16px;height: auto;padding: 8px 12px;display: block;width: 18%; line-height: 1.42857143;color: #555;background-color: #fff;background-image: none;border: 1px solid #ccc;">
+			<h6 class="like_num"><%=event.event_like %></h6>
 		   <button type="button" class="btn btn-big dark-blue-btn">收藏</button>
-           <button type="button" class="btn btn-big dark-blue-btn">评论</button>
 	   </div>
     </section>
 	<% }) %>
