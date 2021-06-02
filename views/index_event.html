@@ -34,14 +34,14 @@
 <!-- -----------------------------部分一---------------------- -->
  
 <div class="container">
-	<%  data.forEach((data,i) => { %>
+	<%  event.forEach((event,i) => { %>
 	<section class="col-md-12 content" id="home">
 	   <div class="col-lg-6 col-md-6 content-item">
 		   <img src="/images/1.jpg" alt="Image" class="tm-image">
 	   </div>
 	   <div class="col-lg-6 col-md-6 content-item content-item-1 background">
-		   <h2 class="main-title text-center dark-blue-text"><%=data.campu_title%></h2>
-           <p><%=data.campu_text%></p>
+		   <h2 class="main-title text-center dark-blue-text"><%=event.event_title%></h2>
+           <p><%=event.event_text%></p>
 		   <button type="button" class="btn btn-big dark-blue-bordered-btn">点赞</button>
 		   <button type="button" class="btn btn-big dark-blue-btn">收藏</button>
            <button type="button" class="btn btn-big dark-blue-btn">评论</button>
