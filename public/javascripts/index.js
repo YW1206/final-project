@@ -43,4 +43,13 @@ Array.from(document.getElementsByClassName('like_event')).forEach(i => {
     };
 });
 
+document.getElementById("byhotlike").onclick=function(){
+    window.location.href="/send_blog/bylike"
+}
+
+document.getElementById("bytime").onclick=function(){
+    window.location.href="/send_blog/bytime"
+}
+ 
+
  
