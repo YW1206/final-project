@@ -4,6 +4,12 @@ var db = require('../models/db');
 
 
 // ------------- 校园-------------------
+router.get("/",(req,res)=>{
+    res.render("sendblog_campu");
+});
+
+
+// -----------分类功能---------------
 router.get("/bylike",(req,res)=>{
     let bylikesql="select * from campu ORDER BY campu_like DESC"
     db.exe(bylikesql,"",(err,row)=>{
@@ -18,10 +24,6 @@ router.get("/bytime",(req,res)=>{
     })
 })
 
-
-router.get("/",(req,res)=>{
-    res.render("sendblog_campu");
-});
 
 // ------ 发送博客-----
 router.get("/showblog",(req,res)=>{
@@ -65,9 +67,27 @@ router.get("/club",(req,res)=>{//跳转到发博客的网站
     res.render("sendblog_club");
 });
 
+// -----------分类功能---------------
+
+router.get("/club_byhotlike",(req,res)=>{
+    let clublikesql="select * from club ORDER BY club_like DESC"
+    db.exe(clublikesql,"",(err,club_hot)=>{
+        res.render("index_club",{club:club_hot})
+    })
+})
+
+router.get("/club_bytime",(req,res)=>{
+    let clubtime="select * from club  ORDER BY id desc"
+    db.exe(clubtime,"",(err,time)=>{
+        res.render("index_club",{club:time})
+    })
+})
+
+
+
 // ----- 发送博客 ------
 router.get("/showblog_club",(req,res)=>{
-    let apple_club="select * from club ORDER BY club_like DESC"
+    let apple_club="select * from club "
     db.exe(apple_club,"",(err,club)=>{
     res.render('index_club',{club:club});
     })
@@ -104,9 +124,27 @@ router.get("/event",(req,res)=>{
     res.render("sendblog_event");
 });
 
+
+
+// -----------分类功能---------------
+router.get("/event_byhotlike",(req,res)=>{
+    let eventlikesql="select * from event ORDER BY event_like DESC"
+    db.exe(eventlikesql,"",(err,event_hot)=>{
+        res.render("index_event",{event:event_hot})
+    })
+})
+
+router.get("/event_bytime",(req,res)=>{
+    let eventtime="select * from event  ORDER BY id desc"
+    db.exe(eventtime,"",(err,event_time)=>{
+        res.render("index_event",{event:event_time})
+    })
+})
+
+
 // ----- 发送博客 -----
 router.get("/showblog_event",(req,res)=>{
-    let apple_event="select * from event ORDER BY event_like DESC"
+    let apple_event="select * from event "
     db.exe(apple_event,"",(err,event)=>{
     res.render('index_event',{event:event});
     })
@@ -143,9 +181,27 @@ router.get("/honor",(req,res)=>{
     res.render("sendblog_honor");
 });
 
+
+// -----------分类功能---------------
+router.get("/honor_byhotlike",(req,res)=>{
+    let honorlikesql="select * from honor ORDER BY honor_like DESC"
+    db.exe(honorlikesql,"",(err,honor_hot)=>{
+        res.render("index_honor",{honor:honor_hot})
+    })
+})
+
+router.get("/honor_bytime",(req,res)=>{
+    let honortime="select * from honor  ORDER BY id desc"
+    db.exe(honortime,"",(err,honor_time)=>{
+        res.render("index_honor",{honor:honor_time})
+    })
+})
+
+
+
 // -----发送博客-----
 router.get("/showblog_honor",(req,res)=>{
-    let apple_honor="select * from honor ORDER BY honor_like DESC"
+    let apple_honor="select * from honor "
     db.exe(apple_honor,"",(err,honor)=>{
     res.render('index_honor',{honor:honor});
     })
